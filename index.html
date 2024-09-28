@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Break Reminder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Focus on your work!</h1>
+        <p>Set a custom timer below and we’ll remind you to take a break.</p>
+
+        <!-- Input field to set custom time in minutes -->
+        <label for="time-input">Set Timer (minutes):</label>
+        <input type="number" id="time-input" placeholder="Enter minutes" min="1">
+        
+        <!-- Control buttons for the timer -->
+        <div class="buttons">
+            <button id="start-button">Start</button>
+            <button id="stop-button" disabled>Stop</button>
+            <button id="restart-button" disabled>Restart</button>
+        </div>
+
+        <div id="timer">Next break in: <span id="time-remaining">00:00</span> minutes</div>
+    </div>
+
+    <div id="break-reminder" class="hidden">
+        <h2>Take a Break!</h2>
+        <p>Look away from your screen for 20 seconds.</p>
+        <button id="continue">Continue</button>
+    </div>
+
+    <!-- Getting Started Popup -->
+    <div id="getting-started-popup" class="hidden">
+        <div class="popup-content">
+            <h2>Getting Started</h2>
+            <p>To get the most out of the Screen Break Reminder:</p>
+            <ul>
+                <li><strong>Add to Dock:</strong> Drag this website’s URL to your Dock for easy access.</li>
+                <li><strong>Open at Login:</strong> Set your browser to open at login via System Settings &gt; Users & Groups &gt; Login Items.</li>
+                <li><strong>Allow Notifications:</strong> Enable browser notifications to receive break reminders.</li>
+            </ul>
+            <button id="close-popup">Got it!</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
